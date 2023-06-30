@@ -1,3 +1,5 @@
+import path from 'path'
+
 const config = {
   projectName: 'TimeConcept-mini',
   date: '2023-6-29',
@@ -71,6 +73,9 @@ const config = {
         enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
       }
     }
+  },
+  alias: {
+    '@/store': path.resolve(__dirname, '..', 'src/store'),
   }
 }
 

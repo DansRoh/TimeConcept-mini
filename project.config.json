@@ -2,12 +2,12 @@
   "miniprogramRoot": "./dist",
   "projectname": "TimeConcept-mini",
   "description": "时间随想小程序",
-  "appid": "touristappid",
+  "appid": "wxd615abc31496b252",
   "setting": {
     "urlCheck": true,
     "es6": false,
     "enhance": false,
-    "compileHotReLoad": false,
+    "compileHotReLoad": true,
     "postcss": false,
     "minified": false
   },
