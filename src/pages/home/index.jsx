@@ -1,6 +1,9 @@
-import { useEffect } from 'react'
-import { View, Text } from "@tarojs/components";
+import { useEffect } from "react";
+import { View } from "@tarojs/components";
 import { useLoad } from "@tarojs/taro";
+import Navbar from "@/components/Navbar/Navbar";
+import GradientButton from "@/components/GradientButton/GradientButton";
+import Spaceman from "@/components/Spaceman/Spaceman";
 import "./index.scss";
 
 export default function Index() {
@@ -9,12 +12,14 @@ export default function Index() {
   });
 
   useEffect(() => {
-    console.log('homeeff');
+    console.log("homeeff");
   }, []);
 
   return (
-    <View className='index'>
-      <Text>Hello home!</Text>
+    <View className='home-page page-wrapper'>
+      <Navbar title='home'></Navbar>
+      <GradientButton text='按钮'></GradientButton>
+      <Spaceman></Spaceman>
     </View>
   );
 }

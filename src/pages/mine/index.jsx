@@ -1,6 +1,6 @@
 import { View, Text } from "@tarojs/components";
 import { useLoad } from "@tarojs/taro";
-import "./index.scss";
+import Navbar from '@/components/NavBar/Navbar'
 
 export default function Index() {
   useLoad(() => {
@@ -8,7 +8,8 @@ export default function Index() {
   });
 
   return (
-    <View className='index'>
+    <View className='index page-wrapper'>
+      <Navbar title='mine'></Navbar>
       <Text>mine!</Text>
     </View>
   );

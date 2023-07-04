@@ -1,13 +1,13 @@
 /*
  * @Author: luoda
  * @Date: 2023-06-30 10:06:53
- * @LastEditTime: 2023-06-30 11:38:34
+ * @LastEditTime: 2023-07-04 09:52:23
  * @LastEditors: luoda
  * @Description:
  */
 import { useState, useEffect } from "react";
 import { switchTab, getCurrentPages } from "@tarojs/taro";
-import { CoverView, CoverImage } from "@tarojs/components";
+import { View, Image } from "@tarojs/components";
 
 import tabbar_home_on from "../images/tabbar_home_on.png";
 import tabbar_home from "../images/tabbar_home.png";
@@ -17,8 +17,8 @@ import tabbar_mine from "../images/tabbar_mine.png";
 import "./index.scss";
 
 const tabbarConfig = {
-  color: "#000000",
-  selectedColor: "#DC143C",
+  color: "#666666",
+  selectedColor: "#4594d5",
   list: [
     {
       pagePath: "/pages/home/index",
@@ -55,27 +55,24 @@ function CustomTabBar() {
   };
 
   return (
-    <CoverView className='tab-bar'>
-      <CoverView className='tab-bar-border'></CoverView>
+    <View className='tab-bar'>
       {list.map((item, index) => {
         return (
-          <CoverView
+          <View
             key={index}
             className='tab-bar-item'
             onClick={() => handleSwitchTab(item.pagePath)}
           >
-            <CoverImage
+            <Image
               src={selected === index ? item.selectedIconPath : item.iconPath}
             />
-            <CoverView
+            <View
               style={{ color: selected === index ? selectedColor : color }}
-            >
-              {item.text}
-            </CoverView>
-          </CoverView>
+            ></View>
+          </View>
         );
       })}
-    </CoverView>
+    </View>
   );
 }
 

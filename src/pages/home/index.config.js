@@ -1,4 +1,6 @@
 export default definePageConfig({
-  navigationBarTitleText: 'home',
-  usingComponents: {}
+  navigationStyle: 'custom',
+  enablePullDownRefresh: false,
+  disableScroll: true,
+  usingComponents: {},
 })
